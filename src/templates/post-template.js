@@ -12,7 +12,7 @@ const PostTemplate = ({ data }) => {
   // console.log(data)
   const {
     mdx: {
-      frontmatter: { title, category, image, date },
+      frontmatter: { title, category, embeddedImages, image, date },
       body,
     },
   } = data
@@ -32,7 +32,8 @@ const PostTemplate = ({ data }) => {
             <p>{date}</p>
             <div className="underline"></div>
           </div>
-          <MDXRenderer>{body}</MDXRenderer>
+          {/* vv pass embedded images vv */}
+          <MDXRenderer embeddedImages={embeddedImages}>{body}</MDXRenderer>
         </article>
         <article>
           <Banner />
@@ -51,6 +52,11 @@ export const query = graphql`
         slug
         title
         readTime
+        embeddedImages {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
         image {
           childImageSharp {
             gatsbyImageData
