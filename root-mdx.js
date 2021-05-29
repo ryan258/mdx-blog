@@ -1,6 +1,12 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import { Headings, Code, Blockquote } from './src/components/Complete'
+import {
+  Headings,
+  Code,
+  Blockquote,
+  Example,
+  PrismSetup,
+} from './src/components/Complete'
 
 //! vv move this to own file - ./src/components/Complete
 // const myH2 = props => {
@@ -38,6 +44,7 @@ const components = {
   // inlineCode: Testing,
   inlineCode: Code,
   blockquote: Blockquote,
+  pre: PrismSetup,
 }
 
 // wrapRootElement must be the name
