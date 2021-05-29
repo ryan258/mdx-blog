@@ -1,3 +1,4 @@
+//! This is basically the sidebar
 import React from 'react'
 import styled from 'styled-components'
 import About from './About'
@@ -5,7 +6,11 @@ import Recent from './Recent'
 import BannerCategories from './BannerCategories'
 const Banner = () => {
   return (
-    <Wrapper>Banner</Wrapper>
+    <Wrapper>
+      <About />
+      <Recent />
+      <BannerCategories />
+    </Wrapper>
   )
 }
 

@@ -7,7 +7,20 @@ import styled from 'styled-components'
 const About = () => {
   return (
     <Wrapper>
-      Banner About
+      <Title title="About Me" />
+      <StaticImage
+        src="../../assets/banner-about.jpeg"
+        layout="fixed"
+        width={100}
+        height={100}
+        alt="Author"
+        className="img"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A eveniet ipsam
+        esse omnis! Consequuntur, corrupti.
+      </p>
+      <SocialLinks styleClass="banner-icons" />
     </Wrapper>
   )
 }
