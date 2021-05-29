@@ -1,14 +1,8 @@
 import { Link } from 'gatsby'
 import { FiInfo } from 'react-icons/fi'
-import { Counter, LikeButton } from '../components/Complete'
+import { Counter, LikeButton, RegVideo, Video } from '../components/Complete'
 
 <section className="mdx-page">
-
-<div className="mdx-img">
-
-![a groovy image](../assets/gatsby-1.png)
-
-</div>
 
 ## my first mdx file
 
@@ -36,6 +30,14 @@ const lastName = 'Manny'
 <FiInfo className="nice-text-icon" />
 
 Adipisicing twee thundercats skateboard. Flexitarian hell of pariatur flannel gluten-free 8-bit, glossier you probably haven't heard of them try-hard nostrud. Schlitz cold-pressed biodiesel consectetur. Ut ennui meggings, wayfarers dolor leggings letterpress direct trade. Letterpress minim mixtape ut sint voluptate.
+
+</div>
+
+<h2>An Image On an MDX Page!</h2>
+
+<div className="mdx-img">
+
+![a groovy image](../assets/gatsby-1.png)
 
 </div>
 
@@ -68,6 +70,12 @@ const LikeButton = () => {
 ```
 
 <LikeButton />
+
+<h2>Video Components!</h2>
+
+<RegVideo />
+
+<Video src="https://www.youtube.com/embed/bLiXjaPqSyY" title="The Raven" />
 
 <Link to="/posts" className="btn center-btn">
   Back to All Posts

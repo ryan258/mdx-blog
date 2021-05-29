@@ -1,16 +1,20 @@
 import React from 'react'
 import video from '../../assets/connect.mp4'
 import styled from 'styled-components'
+
+// regular video that we store locally
 export const RegVideo = () => {
   return (
     <RegVideoWrapper>
       <video controls autoPlay muted loop>
+        {/* ^ video is being imported above ^ */}
         <source src={video} type="video/mp4" />
       </video>
     </RegVideoWrapper>
   )
 }
 
+// an iframe  where we will get the url and then display that iframe
 export const Video = ({ src, title, ...props }) => {
   return (
     <IframeVideoWrapper>
@@ -29,6 +33,7 @@ export const Video = ({ src, title, ...props }) => {
   )
 }
 
+// most of the gotchas will be about CSS, because the rendering is going to be pretty straight-forward
 const RegVideoWrapper = styled.div`
   width: 90vw;
   max-width: 700px;
